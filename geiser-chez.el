@@ -164,6 +164,7 @@ Return its local name."
     ((load-file compile-file)
      (let ((lib (geiser-chez--current-library)))
        (format "(%s %s '%s)" geiser-chez--load (car args) (or lib "#f"))))
+    ((no-values) "")
     (t (list (format "geiser:%s" proc) (mapconcat 'identity args " ")))))
 
 (defun geiser-chez--current-library ()
