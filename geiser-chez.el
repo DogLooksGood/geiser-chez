@@ -135,7 +135,7 @@ Return its local name."
           geiser-chez-extra-command-line-parameters))
 
 (defconst geiser-chez--prompt-regexp "> ")
-(defconst geiser-chez--debugger-prompt-regexp "debug> $\\|break> $\\|.+: $")
+(defconst geiser-chez--debugger-prompt-regexp "debug> $\\|break> $\\|.+ +: ")
 
 (defun geiser-chez--version (binary)
   "Use BINARY to find Chez scheme version."
